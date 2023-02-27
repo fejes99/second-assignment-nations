@@ -28,21 +28,15 @@ class App extends Component {
   }
 
   searchHandler = (event) => {
-    this.setState(
-      {
-        searchQuery: event.target.value,
-      },
-      () => searchFilter(this.state.selectedRegion, this.state.nations, this.state.searchQuery)
-    );
+    this.setState({
+      searchQuery: event.target.value,
+    });
   };
 
   optionHandler = (event) => {
-    this.setState(
-      {
-        selectedRegion: event.target.value,
-      },
-      () => searchFilter(this.state.selectedRegion, this.state.nations, this.state.searchQuery)
-    );
+    this.setState({
+      selectedRegion: event.target.value,
+    });
   };
 
   render() {
